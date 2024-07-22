@@ -1,10 +1,15 @@
 import java.util.Scanner;
 
 public class Main {
-    public static IEmployeeManager EmployeeManager = new EmployeeManager();
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         char option = '\0';
+
+
+        ISalaryCalculator salaryCalculator = new SalaryCalculator();
+
+
+        IEmployeeManager employeeManager = new EmployeeManager(salaryCalculator);
 
         System.out.println("Menu de Operaciones:");
         System.out.println("1. Crear empleado ");
@@ -27,7 +32,7 @@ public class Main {
                         System.out.println("Ingrese el departamento");
                         String department = scanner.next();
                         Employee employee = new Employee(name, department);
-                        EmployeeManager.addEmployee(employee);
+                        employeeManager.addEmployee(employee);
                         break;
                     case '2':
                         System.out.println("Ingrese el nombre del empleado");
@@ -35,19 +40,19 @@ public class Main {
                         System.out.println("Ingrese el departamento");
                         String departmentPartial = scanner.next();
                         Employee partTimeEmployee = new PartTimeEmployee(namePartial, departmentPartial);
-                        EmployeeManager.addEmployee(partTimeEmployee);
+                        employeeManager.addEmployee(partTimeEmployee);
                         break;
                     case '3':
                         System.out.println("Ingrese el nombre del empleado");
                         String nameToRemove = scanner.next();
                         Employee employeeToRemove = new Employee(nameToRemove, "");
-                        EmployeeManager.removeEmployee(employeeToRemove);
+                        employeeManager.removeEmployee(employeeToRemove);
                         break;
                     case '4':
                         System.out.println("Ingrese el nombre del empleado");
                         String nameToCalculate = scanner.next();
                         Employee employeeToCalculate = new Employee(nameToCalculate, "");
-                        EmployeeManager.calculateSalary(employeeToCalculate);
+                        employeeManager.calculateSalary(employeeToCalculate);
                         break;
                     case '5':
                         System.out.println("Generando Reporte en Excel...");

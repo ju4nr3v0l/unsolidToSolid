@@ -1,4 +1,10 @@
 public class EmployeeManager implements IEmployeeManager {
+    private ISalaryCalculator salaryCalculator;
+
+    // Constructor que inyecta la dependencia
+    public EmployeeManager(ISalaryCalculator salaryCalculator) {
+        this.salaryCalculator = salaryCalculator;
+    }
     @Override
     public void addEmployee(Employee employee) {
         System.out.println("Empleado agregado");
@@ -11,8 +17,6 @@ public class EmployeeManager implements IEmployeeManager {
 
     @Override
     public void calculateSalary(Employee employee) {
-
-        SalaryCalculator salaryCalculator = new SalaryCalculator();
         System.out.println(salaryCalculator.calculateSalary(employee));
     }
 
