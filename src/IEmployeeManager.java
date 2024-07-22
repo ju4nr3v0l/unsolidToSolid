@@ -4,7 +4,7 @@ public interface IEmployeeManager {
 
     void removeEmployee(Employee employee);
 
-    double calculateSalary(String name);
+    double calculateSalary(Employee employee);
 
     void saveToFile(String name);
 

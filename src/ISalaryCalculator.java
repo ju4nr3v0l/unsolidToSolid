@@ -1,3 +1,3 @@
 public interface ISalaryCalculator {
-    double calculateSalary(String employeeId);
+    double calculateSalary(Employee employee);
 }

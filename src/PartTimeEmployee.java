@@ -1,6 +1,6 @@
 public class PartTimeEmployee extends Employee {
 
-    public PartTimeEmployee(String name) {
+    public PartTimeEmployee(Employee employee) {
         this.name = name;
     }
 

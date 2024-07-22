@@ -6,7 +6,7 @@ public class SalaryCalculator implements ISalaryCalculator {
     }
 
     @Override
-    public double calculateSalary(String employee) {
+    public double calculateSalary(Employee employee) {
         // Implementación del cálculo de salario
         return 0.0;
     }

@@ -1,6 +1,6 @@
 public class EmployeeManager implements IEmployeeManager {
     @Override
-    public void addEmployee( Employee employee) {
+    public void addEmployee(Employee employee) {
         System.out.println("Employee added");
     }
 
@@ -10,7 +10,7 @@ public class EmployeeManager implements IEmployeeManager {
     }
 
     @Override
-    public double calculateSalary(String name) {
+    public double calculateSalary(Employee employee) {
         return 0;
     }
 
