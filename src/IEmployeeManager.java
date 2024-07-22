@@ -1,7 +1,11 @@
 public interface IEmployeeManager {
 
-     String addEmployee(String name);
+     void addEmployee(Employee employee);
 
-    String removeEmployee(String name);
+    void removeEmployee(Employee employee);
+
+    double calculateSalary(String name);
+
+    void saveToFile(String name);
 
 }

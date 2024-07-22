@@ -1,13 +1,21 @@
 public class EmployeeManager implements IEmployeeManager {
     @Override
-    public String addEmployee(String name) {
+    public void addEmployee( Employee employee) {
         System.out.println("Employee added");
-        return name;
     }
 
     @Override
-    public String removeEmployee(String name) {
+    public void removeEmployee(Employee employee) {
         System.out.println("Employee removed");
-        return name;
+    }
+
+    @Override
+    public double calculateSalary(String name) {
+        return 0;
+    }
+
+    @Override
+    public void saveToFile(String name) {
+
     }
 }
