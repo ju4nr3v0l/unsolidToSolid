@@ -9,13 +9,13 @@
 
 ## Incumplimiento de prinicios SOLID:
 
-- **Principio de Responsabilidad Única (SRP)**: ReportGenerator se encarga de generar reportes en Excel y PDF. Esto significa que tiene más de una razón para cambiar, lo que va en contra del SRP.
+- **Principio de Responsabilidad Única (SRP)**: `ReportGenerator` se encarga de generar reportes en Excel y PDF. Esto significa que tiene más de una razón para cambiar, lo que va en contra del SRP.
 
-- **Principio de Inversión de Dependencias (DIP)**: En el método calculateSalary de SalaryCalculator, se crea una instancia de EmployeeManager directamente. Esto muestra una  dependencia de una implementación específica en lugar de una abstracción, lo que no va  con el DIP, y es mejor depender de abstracciones en vez de concreciones.
+- **Principio de Inversión de Dependencias (DIP)**: En el método `calculateSalary` de `SalaryCalculator`, se crea una instancia de EmployeeManager directamente. Esto muestra una  dependencia de una implementación específica en lugar de una abstracción, lo que no va  con el DIP, y es mejor depender de abstracciones en vez de concreciones.
 
-- **Principio de Sustitución de Liskov (LSP)**: PartTimeEmployee sobrescribe el método getName() y lanza una excepción, lo que cambia el comportamiento que se espera cuando se trata como su tipo base Employee. Esto viola el LSP, ya que PartTimeEmployee no puede ser  sustituido del todo por Employee.
+- **Principio de Sustitución de Liskov (LSP)**: `PartTimeEmployee` sobrescribe el método getName() y lanza una excepción, lo que cambia el comportamiento que se espera cuando se trata como su tipo base Employee. Esto viola el LSP, ya que `PartTimeEmployee` no puede ser  sustituido del todo por `Employee`.
 
-- **Principio de Segregación de Interfaces (ISP)**: Aunque no se identifica claramente en los fragmentos de código, si EmployeeManager implementa EmployeeOperations y esta interfaz tiene métodos que no son necesarios para todas las clases que la implementan, se estaría violando el ISP.
+- **Principio de Segregación de Interfaces (ISP)**: Aunque no se identifica claramente en los fragmentos de código, si `EmployeeManager` implementa `EmployeeOperations` y esta interfaz tiene métodos que no son necesarios para todas las clases que la implementan, se estaría violando el ISP.
 
 
 
