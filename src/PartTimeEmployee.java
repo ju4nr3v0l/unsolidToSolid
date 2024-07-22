@@ -1,12 +1,13 @@
 public class PartTimeEmployee extends Employee {
 
-    public PartTimeEmployee(Employee employee) {
-        this.name = name;
+    private String type = "Part Time";
+
+    public PartTimeEmployee(String name, String department) {
+        super(name, department);
     }
 
-    @Override
-    public String getName() {
 
-        return name;
+    public String getType() {
+        return this.type;
     }
 }

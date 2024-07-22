@@ -1,17 +1,19 @@
 public class EmployeeManager implements IEmployeeManager {
     @Override
     public void addEmployee(Employee employee) {
-        System.out.println("Employee added");
+        System.out.println("Empleado agregado");
     }
 
     @Override
     public void removeEmployee(Employee employee) {
-        System.out.println("Employee removed");
+        System.out.println("Empleado eliminado");
     }
 
     @Override
-    public double calculateSalary(Employee employee) {
-        return 0;
+    public void calculateSalary(Employee employee) {
+
+        SalaryCalculator salaryCalculator = new SalaryCalculator();
+        System.out.println(salaryCalculator.calculateSalary(employee));
     }
 
     @Override
