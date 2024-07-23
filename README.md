@@ -17,7 +17,7 @@
 
 - **Principio de Segregación de Interfaces (ISP)**: Aunque no se identifica claramente en los fragmentos de código, si `EmployeeManager` implementa `EmployeeOperations` y esta interfaz tiene métodos que no son necesarios para todas las clases que la implementan, se estaría violando el ISP.
 
-- ** Principio de Abierto/Cerrado (OCP)**: No se cumple con el principio de abierto/cerrado ya que si se desea agregar un nuevo tipo de empleado, se tendría que modificar la clase `EmployeeManager` para agregar un nuevo `if` en el método `calculateSalary`, lo que implica modificar una clase ya existente en lugar de extenderla.
+- **Principio de Abierto/Cerrado (OCP)**: No se cumple con el principio de abierto/cerrado ya que si se desea agregar un nuevo tipo de empleado, se tendría que modificar la clase `EmployeeManager` para agregar un nuevo `if` en el método `calculateSalary`, lo que implica modificar una clase ya existente en lugar de extenderla.
 
 
 
